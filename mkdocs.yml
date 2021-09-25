@@ -1,0 +1,42 @@
+site_name: MkLorum
+site_url: null
+repo_url: https://github.com/example/repository/
+
+# nav:
+#   - Home: index.md
+#   - About: about.md
+# theme: readthedocs
+# theme: material
+
+# theme:
+#   name: mkdocs
+#   # nav_style: dark
+#   # nav_style: light
+#   navigation_depth: 2
+#   # locale: en
+#   shortcuts:
+#     help: 191 # ?
+#     next: 78 # n
+#     previous: 80 # p
+#     search: 83 # s
+
+#   highlightjs: true
+#   hljs_languages:
+#     - yaml
+#     - rust
+
+theme:
+  name: readthedocs
+  highlightjs: true
+  analytics:
+    gtag: null
+  hljs_languages:
+    - yaml
+    - rust
+
+markdown_extensions:
+  - footnotes
+
+plugins:
+  - search:
+      indexing: "full"
