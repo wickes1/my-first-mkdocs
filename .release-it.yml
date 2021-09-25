@@ -1,0 +1,27 @@
+---
+hook:
+  after:bump:
+    ["auto-changelog --template keepachangelog", git commit -am "Changelog"]
+git:
+  # changelog: "auto-changelog --template keepachangelog"
+  # changelog: git log --pretty=format:"* %s (%h)" ${from}...${to}
+  requireCleanWorkingDir: true
+  requireBranch: false
+  requireUpstream: true
+  requireCommits: false
+  addUntrackedFiles: false
+  commit: true
+  commitMessage: Release ${version}
+  commitArgs: []
+  tag: true
+  tagName:
+  tagMatch:
+  tagAnnotation: Release ${version}
+  tagArgs: []
+  push: true
+  pushArgs:
+    - "--follow-tags"
+  pushRepo: ""
+
+github:
+  release: true
