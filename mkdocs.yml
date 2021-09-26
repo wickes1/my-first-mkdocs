@@ -1,11 +1,9 @@
 site_name: MkLorum
 site_description: This is a trial test of mkdocs
 site_url: null
+repo_name: wickes1/my-first-mkdocs
 repo_url: https://github.com/wickes1/my-first-mkdocs
-# nav:
-#   - Home: index.md
-#   - About: about.md
-
+edit_uri: ""
 theme:
   name: material
   favicon: img/favicon.ico
@@ -16,18 +14,37 @@ theme:
   palette:
     - media: "(prefers-color-scheme: light)"
       scheme: default
-      primary: indigo
-      accent: light-blue
+      primary: teal
+      accent: amber
       toggle:
         icon: material/weather-sunny
         name: Switch to dark mode
     - media: "(prefers-color-scheme: dark)"
       scheme: slate
-      primary: black
-      accent: deep orange
+      primary: teal
+      accent: amber
       toggle:
         icon: material/weather-night
         name: Switch to light mode
+
+nav:
+  - Home: index.md
+  - About: about.md
+  - Mermaid: mermaid.md
+  - Markdown Tutorial:
+      - tutorial/00.md
+      - tutorial/01.md
+      - tutorial/02.md
+      - tutorial/03.md
+      - tutorial/04.md
+      - tutorial/05.md
+      - tutorial/06.md
+      - tutorial/07.md
+      - tutorial/08.md
+      - tutorial/09.md
+      - tutorial/10.md
+      - tutorial/11.md
+      - tutorial/12.md
 
 markdown_extensions:
   - footnotes
@@ -37,6 +54,7 @@ markdown_extensions:
         - name: mermaid
           class: mermaid
           format: !!python/name:mermaid2.fence_mermaid
+  - pymdownx.tabbed
 plugins:
   - search:
       lang: en
@@ -47,12 +65,17 @@ plugins:
         # test if its __palette_1 (dark) or __palette_2 (light)
         theme: |
           ^(JSON.parse(window.localStorage.getItem('/.__palette')).index == 1) ? 'dark' : 'light'
+
 extra_javascript:
   - https://unpkg.com/mermaid/dist/mermaid.min.js
   - extra/refresh_on_toggle_dark_light.js
-# extra:
-#   version:
-#     provider: mike
+
+extra:
+  version:
+    provider: mike
+  social:
+    - icon: fontawesome/brands/github-alt
+      link: https://github.com/wickes1/my-first-mkdocs
 # theme:
 #   name: mkdocs
 #   # nav_style: dark
