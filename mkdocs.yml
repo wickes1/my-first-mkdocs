@@ -71,11 +71,11 @@ extra_javascript:
   - extra/refresh_on_toggle_dark_light.js
 
 extra:
-  version:
-    provider: mike
   social:
     - icon: fontawesome/brands/github-alt
       link: https://github.com/wickes1/my-first-mkdocs
+  # version:
+  #   provider: mike
 # theme:
 #   name: mkdocs
 #   # nav_style: dark
